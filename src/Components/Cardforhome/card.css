@@ -1,0 +1,114 @@
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.card2 {
+    position: relative;
+    width: 300px;
+    border: 2px solid #ccc;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
+.card2:hover {
+    border-color: rgb(255, 136, 0);
+}
+
+.card2 img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: opacity 0.3s;
+}
+
+.card2-body {
+    padding: 15px;
+}
+
+.card2-title {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.card2-text {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.card2-body p:hover {
+    color: red;
+}
+
+/* Icon on hover */
+.card2-icons-container {
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.card2:hover .card2-icons-container {
+    opacity: 1;
+}
+
+.card2-icon {
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 1);
+    padding: 5px;
+    transition: background-color 0.3s ease;
+    font-size: 24px;
+    width: 35px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card2-icon:hover {
+    color: rgb(255, 136, 0);
+    background-color: black;
+}
+
+.card2-icons-container a {
+    position: relative;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.card2-icons-container a::after {
+    content: attr(tooltip);
+    position: absolute;
+
+    margin-top: 5px;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 6px;
+    border-radius: 5px;
+    font-size: 10px;
+    white-space: nowrap;
+    opacity: 0;
+    margin-left: 25px;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.card2-icons-container a:hover::after {
+    opacity: 1;
+    visibility: visible;
+}

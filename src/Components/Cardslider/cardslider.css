@@ -1,0 +1,115 @@
+.Appmy {
+    position: relative;
+    padding: 50px;
+    text-align: center;
+    background-image: url('https://img.freepik.com/premium-photo/light-dark-clear-plain-autmn-leaves-orange-red-yellow-background-backdrop-texture-paint-color-sunset_1262705-80345.jpg?uid=R158205955&ga=GA1.1.969309098.1723704216&semt=ais_hybrid');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin-top: 50px;
+    overflow: hidden;
+}
+
+.Appmy::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.Appmy>* {
+    position: relative;
+    z-index: 2;
+}
+
+
+.weekly-featured {
+    color: white;
+    text-align: left;
+    padding: 20px;
+}
+
+.weekly-featured h2 {
+    font-size: 2rem;
+}
+
+.weekly-featured p {
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+.featured {
+    position: relative;
+    width: 200px;
+    /* Reduced width */
+    border: 2px solid #ccc;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    border-radius: 0;
+    margin: 0 7.5px;
+}
+
+.new-label {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgb(255, 136, 0);
+    color: white;
+    padding: 5px;
+    font-size: 0.8rem;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card h3 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+.rating {
+    margin: 10px 0;
+    color: rgb(255, 136, 0);
+}
+
+.price {
+    font-size: 1.1rem;
+}
+
+.old-price {
+    text-decoration: line-through;
+    margin-right: 10px;
+}
+
+.new-price {
+    color: rgb(255, 136, 0);
+}
+
+
+
+/* Add this to your CSS file */
+.slick-slide {
+    padding-left: 10px;
+}
+
+/* Add this to your CSS file */
+.slick-dots li button:before {
+    font-size: 20px;
+    color: #000;
+    content: '■';
+    /* Square shape */
+}
+
+.slick-dots li.slick-active button:before {
+    color: rgb(255, 136, 0);
+    /* Active dot color */
+}
